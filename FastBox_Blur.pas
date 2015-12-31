@@ -7,18 +7,10 @@ uses
 
 type
 
-  TFColor = packed record
-    b, g, r: Byte end;
-    PFColor = ^TFColor;
-    TLine = packed array [0 .. 0] of TFColor;
-    PLine = ^TLine;
-    TPLines = packed array [0 .. 0] of PLine;
-    PPLines = ^TPLines;
-
     procedure FastBoxBlur(Bitmap: TBitmap; pRadius: double = 3;
       pCountOfBoxes: integer = 3);
 
-    // written by e.freimann - depended on Fast Image convolution - http://elynxsdk.free.fr/ext-docs/Blur/Fast_box_blur.pdf
+    // depended on Fast Image convolution - http://elynxsdk.free.fr/ext-docs/Blur/Fast_box_blur.pdf
     // Very fast blurring filter, can blur specified region in bitmap.
 implementation
 
